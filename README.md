@@ -6,7 +6,7 @@ Frontend para o projeto Agenda, desenvolvido em React.js. Ele consome a API do b
 
 Exibição, criação, atualização e exclusão de contatos.
 
-Integração com a API do backend.
+Integração com a API do backend: https://github.com/Druwing/agenda-backend-mongodb.
 
 - Tecnologias:
 
