@@ -1,12 +1,16 @@
+// src/services/api.js
 import axios from 'axios';
-import { toast } from 'react-toastify';
-
-const API_URL = 'https://jwtauthbackend-cloud.vercel.app';
 
 const api = axios.create({
-  baseURL: API_URL,
+  baseURL: 'https://jwtauthbackend-cloud.vercel.app',
+  withCredentials: true,
+  headers: {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json'
+  }
 });
 
+// Interceptor para adicionar o token JWT
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('jwt_token');
   if (token) {
@@ -14,16 +18,5 @@ api.interceptors.request.use((config) => {
   }
   return config;
 });
-
-api.interceptors.response.use(
-  (response) => response,
-  (error) => {
-    if (error.response?.status === 401) {
-      localStorage.removeItem('jwt_token');
-      window.location.href = '/login';
-    }
-    return Promise.reject(error);
-  }
-);
 
 export default api;
