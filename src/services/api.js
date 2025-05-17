@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-const API_URL = 'http://localhost:3000';
+const API_URL = 'https://jwtauthbackend-cloud.vercel.app';
 
 const api = axios.create({
   baseURL: API_URL,
