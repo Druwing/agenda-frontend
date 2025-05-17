@@ -14,7 +14,8 @@ function Login() {
     e.preventDefault();
     setLoading(true);
     try {
-      await login(email, password);      
+      await login(email, password);
+      navigate('/');
     } catch (error) {
       console.error(error.response?.data?.message || error.message || 'Erro desconhecido');
     } finally {
