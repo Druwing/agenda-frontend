@@ -14,6 +14,7 @@ function Register() {
     setLoading(true);
     try {
       await register(name, email, password);
+      navigate('/login');
     } catch (error) {
       console.error(error.response?.data?.message || error.message || 'Erro desconhecido');
     } finally {
