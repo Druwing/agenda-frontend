@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://jwtauthbackend-cloud.vercel.app',
+  baseURL: 'https://agenda-backend-delta.vercel.app',
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json',
