@@ -13,7 +13,11 @@
 }
 
 .console-notification.error {
-  background-color: #e74c3c;
+  background-color: #e74c3c; /* Vermelho para erros */
+}
+
+.console-notification.success {
+  background-color: #2ecc71; /* Verde para sucesso */
 }
 
 @keyframes slideIn {

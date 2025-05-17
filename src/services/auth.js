@@ -16,6 +16,7 @@ export const register = async (name, email, password) => {
   try {
     const response = await api.post('/api/auth/register', { name, email, password });
     toast.success('Cadastro realizado com sucesso! Faça login para continuar.');
+    console.log('Registro realizado com sucesso!');
     return response.data;
   } catch (error) {
     console.error(error.response?.data?.message || error.message || 'Erro desconhecido');
